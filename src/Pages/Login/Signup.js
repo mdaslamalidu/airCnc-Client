@@ -5,7 +5,7 @@ import PrimaryButton from "../../Components/Button/PrimaryButton";
 import { AuthContext } from "../../contexts/AuthProvider";
 
 const Signup = () => {
-  // const { createUser } = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -24,7 +24,9 @@ const Signup = () => {
       body: formData,
     })
       .then((res) => res.json())
-      .then((data) => console.log(data.data.display_url));
+      .then((data) => {
+        console.log(data.data.display_url);
+      });
   };
 
   return (
