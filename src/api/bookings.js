@@ -12,3 +12,11 @@ export const saveBookings = async (booking) => {
   const data = await response.json();
   return data;
 };
+
+export const getAllBookings = async (email) => {
+  const url = `http://localhost:8000/bookings?email=${email}`;
+
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+};

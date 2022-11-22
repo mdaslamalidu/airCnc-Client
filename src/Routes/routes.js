@@ -68,11 +68,11 @@ const router = createBrowserRouter([
         element: <Welcome></Welcome>,
       },
       {
-        path: "mybookings",
+        path: "/dashboard/mybookings",
         element: <MyBooking></MyBooking>,
       },
       {
-        path: "became-host",
+        path: "/dashboard/becameHost",
         element: <BecameAHost></BecameAHost>,
       },
     ],
