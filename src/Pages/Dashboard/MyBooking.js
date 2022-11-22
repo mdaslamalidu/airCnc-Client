@@ -9,6 +9,12 @@ const MyBookings = () => {
   //   const [loading, setLoading] = useState(true);
   const [bookings, setBookings] = useState([]);
 
+  useEffect(() => {
+    getAllBookingsByEmail(user?.email).then((data) => {
+      setBookings(data);
+    });
+  }, [user]);
+
   console.log(bookings);
 
   return (
