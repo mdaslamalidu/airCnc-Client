@@ -6,6 +6,7 @@ import {
 import { Link } from "react-router-dom";
 import PrimaryButton from "../Button/PrimaryButton";
 import { AuthContext } from "../../contexts/AuthProvider";
+import UserMenu from "./UserMenu";
 // import UserMenu from "./UserMenu";
 // import AdminMenu from "./AdminMenu";
 // import HostMenu from "./HostMenu";
@@ -80,6 +81,7 @@ const Sidebar = ({ role, loading }) => {
               ) : (
                 <UserMenu />
               )} */}
+              <UserMenu></UserMenu>
             </nav>
           </div>
         </div>
