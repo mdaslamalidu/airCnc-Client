@@ -31,6 +31,13 @@ export const getAllUsers = async () => {
   return users;
 };
 
+// export const getUserRole = async (email) => {
+//   const url = `http://localhost:8000/users/${email}`;
+//   const response = await fetch(url);
+//   const user = await response.json();
+//   return user?.role;
+// };
+
 export const makeHost = async (user) => {
   delete user._id;
   const response = await fetch(`http://localhost:8000/users/${user?.email}`, {

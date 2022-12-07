@@ -37,6 +37,11 @@ const AddHome = () => {
         bathrooms,
         description,
         imageURL: data,
+        host: {
+          name: user?.dispalyName,
+          email: user?.email,
+          userImage: user?.photoURL,
+        },
       };
       console.log(homesData);
       homeData(homesData).then((data) => {
